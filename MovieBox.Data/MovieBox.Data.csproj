@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Core\FetchService.cs" />
     <Compile Include="Core\IFetchService.cs" />
+    <Compile Include="Models\BoxOfficeOutputModel.cs" />
     <Compile Include="Models\MovieDetailsOutputModel.cs" />
     <Compile Include="Models\RespondModel.cs" />
     <Compile Include="Models\SearchMovieOutputModel.cs" />
