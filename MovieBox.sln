@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieBox.Business", "MovieB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieBox.Data", "MovieBox.Data\MovieBox.Data.csproj", "{3960A215-16BE-486C-ABB3-F87AB8F8DFEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieBox.Ui", "MovieBox.Ui\MovieBox.Ui.csproj", "{44111A8D-0628-4F6D-8791-8C919A766C33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieBox.UI", "MovieBox.Ui\MovieBox.UI.csproj", "{44111A8D-0628-4F6D-8791-8C919A766C33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
