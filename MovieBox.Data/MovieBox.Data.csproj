@@ -48,14 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\FetchService.cs" />
+    <Compile Include="Core\IFetchService.cs" />
+    <Compile Include="Models\MovieDetailsOutputModel.cs" />
+    <Compile Include="Models\RespondModel.cs" />
+    <Compile Include="Models\SearchMovieOutputModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
