@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+
+<div class="row">
+    @using (Html.BeginForm("Search", "Movie", FormMethod.Get, new { id = "searchForm" }))
+    {
+        <div class="form-group">
+            <input class="form-control" type="text" id="searchbox" name="keyword" placeholder="Search the movies" aria-label="Search">
+        </div>
+        <br />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    }
+</div>
+<div class="row">
+    <div class="text-center mb-4" id="lastSearches">
+        <p>Last Searches</p>
+    </div>
+</div>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            var storageValue = localStorage["searchHistories"];
+            var searchHistories = storageValue ? JSON.parse(storageValue) : [];
+
+            for (i in searchHistories) {
+                $('<a href="Movie/Search?keyword=' + searchHistories[i] + '">' + searchHistories[i] + ' </a> ').appendTo("#lastSearches");
+            }
+        });
+
+        $('#searchForm').submit(function () {
+            var storageValue = localStorage["searchHistories"];
+            var searchHistories = storageValue ? JSON.parse(storageValue) : [];
+
+            var val = $('#searchbox').val();
+
+            if (searchHistories.length >= 5)
+                searchHistories.splice(0, 1);
+
+            searchHistories.push(val);
+
+            localStorage["searchHistories"] = JSON.stringify(searchHistories);
+        });
+    </script>
+}
+
+

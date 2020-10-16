@@ -1,0 +1,10 @@
+﻿@model MovieBox.Data.Models.MovieDetailsOutputModel
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>@Model.Title</h2>
+<img src="@Model.Posters.Profile" />
+<p>Rating: @Model.RatingSummary.TopCritics.AverageRating</p>
+<p>@Model.Synopsis</p>
+

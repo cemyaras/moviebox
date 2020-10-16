@@ -1,0 +1,35 @@
+﻿@model MovieBox.Data.Models.SearchMovieOutputModel
+@{
+    ViewBag.Title = "Search";
+    int page = ViewBag.Page;
+    int maxPageLimit = ViewBag.MaxPageLimit;
+    string keyword = ViewBag.Keyword;
+}
+
+<h2>Search Results</h2>
+@foreach (var item in Model.Movies)
+{
+    <ul>
+        <p>@Html.ActionLink(@item.Title, "Detail", new { id = item.Id }) </p>
+        <p>Year: @item.Year</p>
+        <img src="@item.Posters.Profile" alt="cover" />
+    </ul>
+    <br />
+}
+<div class="row">
+    <div class="col-2">
+        @if (page - 1 >= 1)
+        {
+            @Html.ActionLink("Previous Page", "Search", new { page = page - 1, keyword = keyword })
+        }
+    </div>
+    <div class="col-2">
+        @if (page + 1 <= maxPageLimit)
+        {
+            @Html.ActionLink("Next Page", "Search", new { page = page + 1, keyword = keyword })
+        }
+    </div>
+    <div class="col-8"></div>
+</div>
+
+
